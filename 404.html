@@ -14,7 +14,7 @@
         if (info.brand && info.brand.image) document.documentElement.style.setProperty('--brandImage', "url('" + info.brand.image + "')");
         if (info.brand && info.brand.color) document.documentElement.style.setProperty('--brandColor', info.brand.color);
     </script>
-    <script>document.write(`<link rel="shortcut icon" href="${info.brand && info.brand.favicon}" type="image/png">`)</script>
+    <script>document.write(`<link rel="shortcut icon" href="${(info.brand && info.brand.favicon) || "https://jottocraft.com/favicon.png"}" type="image/png">`)</script>
     <style>
         h1 {
             margin-top: 0px;
