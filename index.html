@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="/favicon.png" type="image/png">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Extended" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="https://cdn.jottocraft.com/fluid/v5.min.css"
+    <link type="text/css" rel="stylesheet" href="https://cdn.jottocraft.com/fluid/build/v5/latest/fluid.css"
         media="screen,projection" />
 
     <!--OpenGraph -->
@@ -24,113 +24,58 @@
 
     <script async src="https://cdn.jottocraft.com/fluid/assets/tinycolor.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdn.jottocraft.com/fluid/v5.min.js"></script>
+    <script src="https://cdn.jottocraft.com/fluid/build/v5/latest/fluid.js"></script>
 
     <style>
-        .project {
-            margin: 60px 0px;
-        }
-
-        .project .head img {
-            vertical-align: middle;
-            margin-right: 15px;
-            width: 50px;
-        }
-
-        .project .head img, .otherProjects .item img {
-            filter: drop-shadow(0px 0px 40px var(--color4d)) drop-shadow(0px 4px 4px #00000018);
-        }
-
-        .project .head > div {
-            vertical-align: middle;
-            display: inline-block;
-            margin: 10px 0px;
-        }
-
-        .project .head h5 {
-            font-size: 36px;
-            font-weight: bold;
-            margin-top: 0px;
-        }
-
-        .project .head .links a {
-            color: var(--lightText);
-            cursor: pointer;
-            text-shadow: 2px 2px 20px var(--elementHover);
-        }
-
-        .project .head .links a i, .project .head .links a span {
-            vertical-align: middle;
-        }
-
-        .project .head .links a i {
-            margin-right: 5px;
-        }
-
-        .project .head .links a {
-            margin-right: 12px;
-        }
-
-        .project > img {
-            margin-left: 20px;
-            width: calc(100% - 20px);
-            height: 400px;
-            object-fit: cover;
-            border-radius: var(--elementRadius);
-            object-position: top;
-            position: absolute;
-            left: 0px;
-            z-index: -10;
-            text-align: left;
-        }
-
-        .project.image {
-            text-align: center;
-            margin-bottom: 100px;
-        }
-
-        .project.image .head {
-            text-align: left;
-            padding: 20px 40px;
-        }
-
-        .project.image .head {
-            background: var(--cards);
-            border-radius: var(--elementRadius);
-            box-shadow: var(--lightShadow);
-            display: inline-block;
-            margin-top: 320px;
-        }
-
-        .project.image p {
-            margin-top: 32px;
-        }
-
-        .otherProjects .item {
+        .item {
             width: 150px;
             height: 150px;
             transition: background-color 0.3s, box-shadow 0.3s;
             border-radius: var(--elementRadius);
             display: inline-block;
-            margin: 10px;
+            margin: 20px;
             text-align: center;
             cursor: pointer;
         }
 
-        .otherProjects .item:hover {
+        .item:hover {
             background: var(--cards);
             box-shadow: var(--lightShadow);
         }
 
-        .otherProjects .item img {
+        .item img {
             height: 50px;
             margin-top: calc(50% - 45px);
         }
 
-        .otherProjects .item h5 {
+        .item h5 {
             font-size: 22px;
             margin-top: 18px;
             color: var(--text);
+        }
+
+        /* Header */
+        #header {
+            color: var(--elementText);
+            padding: 100px;
+            padding-bottom: 0px;
+            margin-bottom: 100px;
+            text-align: center;
+        }
+
+        #header h1 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .title img {
+            height: 80px;
+            vertical-align: middle;
+            margin-right: 22px;
+        }
+
+        #header .title {
+            margin-bottom: 40px;
         }
     </style>
 </head>
@@ -138,60 +83,36 @@
 
 <body>
 
-    <div style="max-width: 1000px;" class="container">
-        <h1>Projects</h1>
-        <br />
-        <div style="--color4d: #e3ba4b4d; margin-top: 0px;" class="project image">
-            <img src="https://i.imgur.com/pPSaLPW.png" />
-            <div class="head">
+    <div id="header">
+        <div class="content">
+            <div class="title">
+                <img src="https://cdn.jottocraft.com/images/footerImage.png" />
+                <h1>jottocraft</h1>
+            </div>
+            <div class="row">
+                <a href="https://github.com/jottocraft"><button
+                    class="btn"><i class="fluid-icon">code</i> GitHub</button></a>
+                <a href="mailto:hello@jottocraft.com"><button
+                    class="btn"><i class="fluid-icon">email</i> Contact Me</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="text-align: center;">
+        <div class="projects">
+            <a href="https://powerplus.app" class="item">
                 <img src="https://powerplus.app/icon.svg" />
-                <div>
-                    <h5>Power+</h5>
-                    <div class="links">
-                        <a href="https://powerplus.app"><i class="material-icons">public</i><span>Website</span></a>
-                        <a href="https://github.com/jottocraft/dtps/releases"><i class="material-icons">update</i><span>Releases</span></a>
-                        <a href="https://github.com/jottocraft/dtps"><i class="material-icons">code</i><span>Source code</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="--color4d: #6e6e6e4d;" class="project">
-            <div class="head">
+                <h5>Power+</h5>
+            </a>
+            <a href="https://caltrain.jottocraft.com" class="item">
                 <img src="https://caltrain.jottocraft.com/icon.svg" />
-                <div>
-                    <h5>Caltrain Live</h5>
-                    <div class="links">
-                        <a href="https://play.google.com/store/apps/details?id=com.jottocraft.train"><i class="material-icons">play_prism</i><span>App on Google Play</span></a>
-                        <a href="https://caltrain.jottocraft.com"><i class="material-icons">public</i><span>Website</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="--color4d: #27d69c4d;" class="project">
-            <div class="head">
+                <h5>Caltrain Live</h5>
+            </a>
+            <a href="https://fluid.jottocraft.com" class="item">
                 <img src="https://fluid.jottocraft.com/icon.svg" />
-                <div>
-                    <h5>Fluid UI</h5>
-                    <div class="links">
-                        <a href="https://fluid.jottocraft.com"><i class="material-icons">public</i><span>Website</span></a>
-                        <a href="https://github.com/jottocraft/fluid/releases"><i class="material-icons">update</i><span>Releases</span></a>
-                        <a href="https://github.com/jottocraft/fluid"><i class="material-icons">code</i><span>Source code</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br /><br />
-        <h3>Other Projects</h3>
-        <div class="otherProjects">
-            <a style="--color4d: #4730cd4d;" href="https://sketch.jottocraft.com" class="item">
-                <img src="https://sketch.jottocraft.com/icon.svg" />
-                <h5>Sketch</h5>
+                <h5>Fluid UI</h5>
             </a>
-            <a style="--color4d: #cc45454d;" href="https://red.jottocraft.com" class="item">
-                <img src="https://red.jottocraft.com/app/icon.svg" />
-                <h5>Red</h5>
-            </a>
-            <a style="--color4d: #55b8e64d;" href="https://status.jottocraft.com" class="item">
+            <a href="https://status.jottocraft.com" class="item">
                 <img src="https://status.jottocraft.com/icon.svg" />
                 <h5>Status</h5>
             </a>
@@ -200,16 +121,8 @@
 
     <br /><br /><br /><br /><br />
 
-    <div class="center">
-        <p>Contact me: <a href="mailto:hello@jottocraft.com">hello@jottocraft.com</a></p>
-    </div>
-
-    <br /><br /><br />
     <div style="text-align: center; padding: 50px 0px;">
-        <img style="height: 45px; margin-right: 20px; vertical-align: middle;"
-            src="https://cdn.jottocraft.com/images/footerImage.png" />
-        <h5 style="display: inline-block; vertical-align: middle;">jottocraft</h5>
-        <p>(c) jottocraft 2019-2020. All rights reserved.&nbsp;&nbsp;<a href="https://github.com/jottocraft/jottocraft.com">source
+        <p>(c) jottocraft 2019-2021. All rights reserved.&nbsp;&nbsp;<a href="https://github.com/jottocraft/jottocraft.com">source
                 code</a>&nbsp;&nbsp;<a href="https://github.com/jottocraft/jottocraft.com/blob/master/LICENSE">license</a></p>
     </div>
 
